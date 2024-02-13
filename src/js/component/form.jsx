@@ -1,52 +1,40 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import astronauta from "../../img/astronauta.jpg";
 
-
-//create your first component
 const Form = () => {
-    const [task,setTask]=useState("")
-    const [list,setList]=useState([])
-    // const [map,setMap]=useState([]) !!!!IMPORTANTE MAP
+    const [task, setTask] = useState("");
+    const [list, setList] = useState([]);
 
-    function addTask(e) {
-        setTask(e.target.value)
-        }
 
-    function sumbitTask(e) {
-       
-            if (e.key === "Enter") {
-            setList(list.concat(<li>{task}</li>))
-            // setMap(list.map((i)=><li>{i}</li>)) !!!!IMPORTANTE MAP
-            setTask("")
-        }
-    };
-    
-    
+
+    function submitTask(e) {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            setList(list.concat(task));
+            setTask("");
+          }
+    }
     
 
-   
-
-	return (
+    return (
         <>
-		<div className="container">
-            <h1 className="mx-auto text-center">Form  </h1>
-            <div className="mx-auto text-center ">
-                <input className="bg-success p-2" onChange={addTask} value={task} onKeyDown={sumbitTask} ></input>
-            </div>
-            <div className="mx-auto">
-                <ul className="mx-auto ">
-                    {list}
+            <form>
+                <div className="mb-3" style={{background: `url(${astronauta})`}}>
+                    <label htmlFor="exampleInputEmail1" className="form-label">To Do</label>
+                    <input type="text" className="form-control" onChange={(e) => setTask(e.target.value)} value={task} onKeyDown={submitTask} />
+                </div>
+                <ul>
+                    {list.map((item, index) => (<li key={index}>{item}<i className="fa fa-trash" aria-hidden="true" onClick={() => setList(list.filter((item, myIndex) => index !== myIndex))}></i></li>))}
                 </ul>
-            </div>
-		</div>
+                <div>{list.length} items left</div>
+            </form>
         </>
-	);
-};
+    );
+}
+
+
 
 export default Form;
-
-
-
-
 
 
 
