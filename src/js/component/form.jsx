@@ -17,7 +17,7 @@ const Form = () => {
 
     return (
           
-                <div className="mb-3 container" style={{background: `url(${muro})`}}>
+                <div className="mb-3 container todolist" style={{background: `url(${muro})`}}>
                     <h1 className="title">todos</h1>
                     <input type="text" placeholder="What needs to be done?" className="form-control my-input" onChange={(e) => setTask(e.target.value)} value={task} onKeyDown={submitTask} />
                 

@@ -17,12 +17,14 @@ body{
 }
 
 
-.container {
+.todolist {
     border-radius: 10px;
     border: rgba(255, 255, 255, 0.387);
     border-style: solid;
     width: 100%;
     padding: 0px;
+    
+    
 }
 
 h1 {
@@ -75,14 +77,12 @@ ul li {
 }
 
 .items-left{
-    list-style: none;
     margin-top: 15px;
     margin-left: 3rem;
     font-family: "Montserrat", sans-serif;
     font-size: 1rem;
     font-weight: 60;
-    border-bottom: inset;
-    color: black;
+    width: 80%;
 
 }
 
