@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import astronauta from "../../img/astronauta.jpg";
+import muro from "../../img/muro.jpg";
 
 const Form = () => {
     const [task, setTask] = useState("");
@@ -9,7 +9,6 @@ const Form = () => {
 
     function submitTask(e) {
         if (e.key === "Enter") {
-            e.preventDefault();
             setList(list.concat(task));
             setTask("");
           }
@@ -17,18 +16,17 @@ const Form = () => {
     
 
     return (
-        <>
-            <form>
-                <div className="mb-3" style={{background: `url(${astronauta})`}}>
-                    <label htmlFor="exampleInputEmail1" className="form-label">To Do</label>
-                    <input type="text" className="form-control" onChange={(e) => setTask(e.target.value)} value={task} onKeyDown={submitTask} />
-                </div>
+          
+                <div className="mb-3 container" style={{background: `url(${muro})`}}>
+                    <h1 className="title">todos</h1>
+                    <input type="text" placeholder="What needs to be done?" className="form-control my-input" onChange={(e) => setTask(e.target.value)} value={task} onKeyDown={submitTask} />
+                
                 <ul>
                     {list.map((item, index) => (<li key={index}>{item}<i className="fa fa-trash" aria-hidden="true" onClick={() => setList(list.filter((item, myIndex) => index !== myIndex))}></i></li>))}
                 </ul>
-                <div>{list.length} items left</div>
-            </form>
-        </>
+                <div className="container items-left">{list.length} items left</div>
+                </div>
+            
     );
 }
 

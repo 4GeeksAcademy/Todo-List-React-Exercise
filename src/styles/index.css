@@ -10,7 +10,83 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
-body {
-    background-image: url(/src/img/astronauta.jpg);
-    background: local;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-color: #fbe3e8ac;
 }
+
+
+.container {
+    border-radius: 10px;
+    border: rgba(255, 255, 255, 0.387);
+    border-style: solid;
+    width: 100%;
+    padding: 0px;
+}
+
+h1 {
+    font-size: 6rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 50;
+    font-style: normal;
+    text-align: center;
+    color: rgb(203, 105, 105);
+    letter-spacing: 1px;
+    opacity: 60%;
+}
+
+
+input.my-input {
+    
+    opacity: 40%;
+    font-family: "Montserrat", sans-serif;
+    width: 90%;
+    padding: 0px;
+    border: 0px;
+    margin-left: 2rem;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    
+}
+
+
+
+ul {
+    padding-left: 0px;
+    margin-left: 2rem;
+}
+
+ul li {
+    list-style: none;
+    margin-top: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    border-bottom: inset;
+
+}
+
+.fa{
+    color: red;
+    margin-left: 5rem;
+}
+
+.items-left{
+    list-style: none;
+    margin-top: 15px;
+    margin-left: 3rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 60;
+    border-bottom: inset;
+    color: black;
+
+}
+
+
+
+
+
