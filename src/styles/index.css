@@ -18,14 +18,12 @@ body{
 
 
 .todolist {
-    border-radius: 10px;
-    border: rgba(255, 255, 255, 0.387);
+    border: rgba(11, 1, 1, 0.181);
     border-style: solid;
-    width: 100%;
-    padding: 0px;
-    
-    
+    width: 100%;   
+
 }
+
 
 h1 {
     font-size: 6rem;
@@ -36,24 +34,23 @@ h1 {
     text-align: center;
     color: rgb(203, 105, 105);
     letter-spacing: 1px;
-    opacity: 60%;
+    opacity: 70%;
 }
 
 
 input.my-input {
     
-    opacity: 40%;
+    opacity: 60%;
     font-family: "Montserrat", sans-serif;
-    width: 90%;
+    width: 100%;
     padding: 0px;
     border: 0px;
-    margin-left: 2rem;
+    margin-left: 2px;
+    margin-right: 6px;
     box-sizing: border-box;
     background-color: transparent;
-    color: rgb(0, 0, 0);
-    
+    color: rgb(0, 0, 0);  
 }
-
 
 
 ul {
@@ -61,31 +58,71 @@ ul {
     margin-left: 2rem;
 }
 
-ul li {
+
+  ul li {
     list-style: none;
     margin-top: 15px;
     font-family: "Montserrat", sans-serif;
     font-size: 1rem;
     font-weight: 100;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
     border-bottom: inset;
-
+    margin-right: 2.5rem;
+    word-wrap: break-word; 
+    overflow: hidden; 
 }
+
+
 
 .fa{
-    color: red;
-    margin-left: 5rem;
+    color: rgba(222, 74, 74, 0.669);
+    
 }
+
 
 .items-left{
     margin-top: 15px;
     margin-left: 3rem;
     font-family: "Montserrat", sans-serif;
     font-size: 1rem;
-    font-weight: 60;
+    font-weight: 10;
     width: 80%;
-
 }
 
+
+
+.line-container {
+    position: relative; 
+    display: flex;  
+    align-items: center; 
+    justify-content: center;
+}
+
+
+.line-one {
+    position: absolute;
+    width: 99%;
+    height: 8px;
+    border-right: solid 2px rgba(11, 1, 1, 0.181);
+    border-left: solid 2px rgba(11, 1, 1, 0.181);
+    border-bottom: solid 2px rgba(11, 1, 1, 0.181);
+    bottom: -10px; 
+    overflow: visible; 
+}
+
+
+.line-two {
+    position: relative;
+    width: 97%;
+    height: 8px;
+    overflow: visible;
+    border-right: solid 2px rgba(11, 1, 1, 0.181);
+    border-left: solid 2px rgba(11, 1, 1, 0.181);
+    border-bottom: solid 2px rgba(11, 1, 1, 0.181);
+    bottom: -18px;   
+}
 
 
 

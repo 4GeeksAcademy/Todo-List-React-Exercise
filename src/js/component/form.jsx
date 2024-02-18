@@ -16,18 +16,23 @@ const Form = () => {
     
 
     return (
-          
-                <div className="mb-3 container todolist" style={{background: `url(${muro})`}}>
-                    <h1 className="title">todos</h1>
-                    <input type="text" placeholder="What needs to be done?" className="form-control my-input" onChange={(e) => setTask(e.target.value)} value={task} onKeyDown={submitTask} />
-                
-                <ul>
-                    {list.map((item, index) => (<li key={index}>{item}<i className="fa fa-trash" aria-hidden="true" onClick={() => setList(list.filter((item, myIndex) => index !== myIndex))}></i></li>))}
-                </ul>
-                <div className="container items-left">{list.length} items left</div>
-                </div>
             
-    );
+        <div className="mb-3 container todolist" style={{background: `url(${muro})`}}>
+            <h1 className="title">todos</h1>
+            <input type="text" placeholder="What needs to be done?" className="form-control my-input" onChange={(e) => setTask(e.target.value.slice(0, 35))}value={task} onKeyDown={submitTask} />
+        
+            <ul>
+                {list.map((item, index) => (<li key={index}>{item}<i className="fa fa-trash" aria-hidden="true" onClick={() => setList(list.filter((item, myIndex) => index !== myIndex))}></i></li>))}
+            </ul>
+        <div className="container items-left">{list.length} items left  </div>
+
+             <div class="line-container">
+                <div class="line-one" style={{background: `url(${muro})`}}></div>
+                <div class="line-two" style={{background: `url(${muro})`}}></div>
+            </div>
+        </div>
+
+);
 }
 
 
